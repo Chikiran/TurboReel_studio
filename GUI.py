@@ -138,4 +138,5 @@ with gr.Blocks() as iface:
     )
 
 if __name__ == "__main__":
-    iface.launch()
+    # Set to True to create a Public URL
+    iface.launch(share=False)
