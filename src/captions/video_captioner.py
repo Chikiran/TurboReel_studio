@@ -30,7 +30,8 @@ class VideoCaptioner:
         #shadow_clip = shadow_clip.set_position((shadow_offset, shadow_offset))
 
         # Create the main text
-        text_clip = TextClip(txt, fontsize=fontsize*1.1, font=font, color=color, size=(width*0.8, None), method='caption', stroke_color=shadow_color, stroke_width=fontsize/15)
+        # Change the Text settings here
+        text_clip = TextClip(txt, fontsize=fontsize*1.1, font=font, color='white', size=(width*0.8, None), method='caption', stroke_color='white', stroke_width=fontsize/15)
         
         # Composite all layers
         #return CompositeVideoClip([blur_clip, shadow_clip, text_clip])
@@ -40,7 +41,7 @@ class VideoCaptioner:
     def generate_captions_to_video(self, 
                                    subtitles_path,
                                    font=None, 
-                                   captions_color='#BA4A00', 
+                                   captions_color='#FFFFFF', 
                                    shadow_color='white',
                                    font_size=60,
                                    width=540
